@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sara</title>
+  <!--Favicon-->
+  <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!--Fontawesome-->
+  <script src="https://kit.fontawesome.com/6375c4c264.js" crossorigin="anonymous"></script>
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--css-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+  <!--Java animation-->
+  <div class="intro">
+    <h1 class="logo-header">
+      <center><span class="logo">SaRa</span></center><span class="logo">
+        <center><img class="logpng" src="images/sushi.png" width="50%"></center>
+      </span>
+    </h1>
+  </div>
+  <script type="text/javascript">
+    let intro = document.querySelector('.intro');
+    let logo = document.querySelector('.logo-header');
+    let logoSpan = document.querySelectorAll('.logo');
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+
+      setTimeout(() => {
+
+        logoSpan.forEach((span, idx) => {
+          setTimeout(() => {
+            span.classList.add('active');
+          }, (idx + 1) * 350)
+        });
+
+        setTimeout(() => {
+          logoSpan.forEach((span, idx) => {
+            setTimeout(() => {
+              span.classList.remove("active");
+              span.classList.add('fade');
+
+            }, (idx + 1) * 60)
+          })
+
+        }, 1700);
+
+        setTimeout(() => {
+          intro.style.top = '-100vh';
+        }, 2100)
+
+      })
+    })
+
+
+  </script>
+
+  <!--Header-->
+
+  <div class="header vh-100"><a name="home"></a>
+    <div class="container-fluid" style="background-color: #0f1317; padding: 0; opacity: 100%;">
+      <!--Nav Bar-->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-xxl">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto order-2">
+              <li class="nav-item">
+                <a class="nav-link " id="xxx" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " id="xxx" href="#aboutss">Abous Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " id="xxx" href="#dishes">Dishes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="xxx" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+    <!--Main Text-->
+
+    <div class="container" style="margin-top: 15%;">
+      <div class="row">
+        <div class="col-lg-6">
+
+          <div class="oriental">
+            <h1 class="text">Try Oriental Dishes<br>with SARA!</h1>
+            <a class="btn btn-outline-light btn-lg mt-3" href="#aboutss" onclick="audio.play();"><i class="fas fa-address-card"></i> Explore more...</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--About Us-->
+
+  <div class="aboutss"><a name="aboutss"></a>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <center>
+            <div class="about">
+              <h1 class="about_h">Welcome to SARA</h1>
+              <p class="about_text ">Welcome to SARA! SARA is a website related to asian dishes. Our goal is to introduce you to traditional
+                Asian cuisine, tell you a little history of the creation of these dishes and share delicious recipes!</p>
+            </div>
+          </center>
+        </div>
+        <div class="col-lg-6">
+          <center><img src="images/logo.png" alt="Logo" width="70%"></center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Icons-->
+
+
+  <div class="icons" style="background-color: #171b21; padding: 3%;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4" style="padding: 2%;">
+          <center>
+            <img border="0" src="images/food.png" width="30%" alt="" style="margin: 2%;">
+            <h2 style="color: white; font-weight: bold;">Delicious Food</h2>
+            <span style="color: white;">Here are the recipes and dishes of the best chefs of Oriental cuisine, as well as their wonderful stories.</span>
+          </center>
+        </div>
+        <div class="col-lg-4" style="padding: 2%;">
+          <center>
+            <img src="images/time.png" width="30%" alt="" style="margin: 2%;">
+            <h2 style="color: white; font-weight: bold;">Fast Cooking</h2>
+            <span style="color: white;">Here are the recipes and dishes of the best chefs of Oriental cuisine, as well as their wonderful stories.</span>
+          </center>
+        </div>
+        <div class="col-lg-4" style="padding: 2%;">
+          <center>
+            <img src="images/chef.png" width="30%" alt="" style="margin: 2%;">
+            <h2 style="color: white; font-weight: bold;">Best Recipes</h2>
+            <span style="color: white; width: 20%; ">Here are the recipes and dishes of the best chefs of Oriental cuisine, as well as their wonderful stories.</span>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Story-->
+
+  <div class="story">
+    <h1 style="padding: 10%; color: white; text-align: center; opacity: 90%; ">Our every meal has its own unique story <br> we want yo share with you.</h1>\
+    <center><a class="btn btn-outline-light btn-lg" href="#dishes" style="margin-top: -20%; opacity: 90%;"><i class="fas fa-address-card"></i> Learn more...</a></center>
+  </div>
+
+  <!--Dishes-->
+
+  <div class="dishesss" style="background-color: #171b21;"><a name="dishes"></a>
+    <center>
+      <h1 style="color:white;">Dishes</h1>
+    </center>
+    <div class="container-xxl" >
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"  >
+        <div class="carousel-inner"  >
+          <div class="carousel-item active" >
+            <div class="row">
+              <div class="col">
+                <div class="card" style="background-color:#0f1317;" >
+                  <a href="str1/index.html"> <div class="hiddentext" style="width: 100%; position:absolute; margin-top: 50%;"> <h3 class="watch" style="color:white; text-align: center; display: none;">Watch Recipe</h3></div>
+                   <img src="images/22.jpg" onmouseover="show()" onmouseleave="hide()" class="card-img-top img1" alt="Miso Soup"></a>
+                  <div class="card-body ">
+                    <center>
+                      <h5 class="card-title" style="color:white;">Miso Soup</h5>
+                    </center>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color:#0f1317;">
+                  <a href="str2/index2.html"><div class="hiddentext" style="width: 100%; position:absolute; margin-top: 50%;"> <h3 class="watch" style="color:white; text-align: center; display: none;">Watch Recipe</h3></div><img src="images/11.jpg" class="card-img-top img2" alt="Taiyaki"></a>
+                  <div class="card-body ">
+                    <center>
+                      <h5 class="card-title" style="color:white;">Taiyaki</h5>
+                    </center>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color:#0f1317;">
+                  <a href="str3/index3.html"><div class="hiddentext" style="width: 100%; position:absolute; margin-top: 50%;"> <h3 class="watch" style="color:white; text-align: center; display: none;">Watch Recipe</h3></div><img src="images/33.jpg" class="card-img-top img3" alt="Japanese ramen noodle soup"></a>
+                  <div class="card-body ">
+                    <center>
+                      <h5 class="card-title" style="color: white;">Japanese ramen noodle soup</h5>
+                    </center>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col">
+                <div class="card" style="background-color:#0f1317;">
+                  <a href="str1/index.html"><div class="hiddentext" style="width: 100%; position:absolute; margin-top: 50%;"> <h3 class="watch" style="color:white; text-align: center; display: none;">Watch Recipe</h3></div> <img src="images/44.jpg" class="card-img-top img4" alt="Onigiri"></a>
+                  <div class="card-body">
+                    <center>
+                      <h5 class="card-title" style="color:white;">Onigiri</h5>
+                    </center>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color:#0f1317;">
+                  <a href="str2/index2.html"><img src="images/55.jpg" class="card-img-top img5" alt="MoniMoni"></a>
+                  <div class="card-body">
+                    <center>
+                      <h5 class="card-title" style="color:white;">MoniMoni</h5>
+                    </center>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color:#0f1317;">
+                  <a href="str3/index3.html"><img src="images/66.jpg" class="card-img-top img6" alt="Arriba"></a>
+                  <div class="card-body">
+                    <center>
+                      <h5 class="card-title" style="color:white;">Arriba</h5>
+                    </center>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" style="left: -5%; ">
+          <span class="carousel-control-prev-icon" aria-hidden="true"  ></span>
+          <span class="visually-hidden" >Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" style="right: -5%; ">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  let xl = 0;
+  let yl = document.getElementsByClassName("watch");
+
+  function show() {
+      yl[xl].style.display = "block";
+  }
+
+  function hide() {
+      yl[xl].style.display = "none";
+  }
+  </script>
+
+
+  <!--Share-->
+
+  <div class="share" style="margin: 5% 0 0 0;">
+    <h1 style="padding: 10%; color: white; text-align: center; opacity: 90%; ">You can <strong>share</strong> your own oriental recipe on SARA.</h1>\
+    <center><a class="btn btn-outline-light btn-lg" href="share.html" style="margin-top: -20%; opacity: 90%;">I Want To Share</a></center>
+  </div>
+
+  <!--Contacts-->
+
+  <div class="contacts" style="padding-bottom: 2%;"><a name="contacts"></a>
+    <h1 style="padding-top: 2%; color: white; text-align: center; opacity: 90%; font-weight: bold;">Contact Us</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+
+          <div class="fon1" style="padding: 15%; margin: 2%;">
+            <h2 style="padding: 10%; color: white; text-align: center; opacity: 90%; ">sara@mail.com</h2>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <div class="fon2" style="padding: 15%; margin: 2%;" onmouseover: >
+            <h2 style="padding: 10%; color: white; text-align: center; opacity: 90%;">+7 776 178 75 40</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
