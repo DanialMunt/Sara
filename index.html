@@ -16,6 +16,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--css-->
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -144,35 +145,58 @@
       <div class="row">
         <div class="col-lg-4" style="padding: 2%;">
           <center>
-            <img border="0" src="images/food.png" width="30%" alt="" style="margin: 2%;">
+            <img id="sticked" border="0" src="images/food.png" width="30%" alt="" style="margin: 2%;">
             <h2 style="color: white; font-weight: bold;">Delicious Food</h2>
-            <span style="color: white;">Here are the recipes and dishes of the best chefs of Oriental cuisine, as well as their wonderful stories.</span>
+            <span id="hided" style="color: white; display: none;">Here are the recipes and dishes of the best chefs of Oriental cuisine, as well as their wonderful stories.</span>
           </center>
         </div>
         <div class="col-lg-4" style="padding: 2%;">
           <center>
-            <img src="images/time.png" width="30%" alt="" style="margin: 2%;">
+            <img id="sticke" src="images/time.png" width="30%" alt="" style="margin: 2%;">
             <h2 style="color: white; font-weight: bold;">Fast Cooking</h2>
-            <span style="color: white;">Here are the recipes and dishes of the best chefs of Oriental cuisine, as well as their wonderful stories.</span>
+            <span id="hider" style="color: white; display: none;">Here are the recipes and dishes of the best chefs of Oriental cuisine, as well as their wonderful stories.</span>
           </center>
         </div>
         <div class="col-lg-4" style="padding: 2%;">
           <center>
-            <img src="images/chef.png" width="30%" alt="" style="margin: 2%;">
+            <img id="stic" src="images/chef.png" width="30%" alt="" style="margin: 2%;">
             <h2 style="color: white; font-weight: bold;">Best Recipes</h2>
-            <span style="color: white; width: 20%; ">Here are the recipes and dishes of the best chefs of Oriental cuisine, as well as their wonderful stories.</span>
+            <span id="hi" style="color: white; width: 20%; display: none;">Here are the recipes and dishes of the best chefs of Oriental cuisine, as well as their wonderful stories.</span>
           </center>
         </div>
       </div>
     </div>
   </div>
 
+  <script>
+
+    $('#sticked').mouseover(function(){
+      $('#hided').fadeToggle()('slow');
+    });
+    $('#sticke').mouseover(function(){
+      $('#hider').fadeToggle()('slow');
+    });
+    $('#stic').mouseover(function(){
+      $('#hi').fadeToggle()('slow');
+    });
+
+  </script>
+
   <!--Story-->
 
   <div class="story">
-    <h1 style="padding: 10%; color: white; text-align: center; opacity: 90%; ">Our every meal has its own unique story <br> we want yo share with you.</h1>\
-    <center><a class="btn btn-outline-light btn-lg" href="#dishes" style="margin-top: -20%; opacity: 90%;"><i class="fas fa-address-card"></i> Learn more...</a></center>
+    <h1  style="padding: 10%; color: white; text-align: center; opacity: 90%; ">Our every meal has its own unique story <br> we want yo share with you.</h1>\
+    <center><a id="stick" class="btn btn-outline-light btn-lg" style="margin-top: -20%; opacity: 90%;"><i class="fas fa-address-card"></i> Learn more...</a></center>
+    <p id="hide" style="padding: 0 25%; text-align: center; margin-top: -8%; padding-bottom: 5% ; color:White; display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
+
+  <script>
+
+    $('#stick').click(function(){
+      $('#hide').slideToggle()(1000);
+    });
+
+  </script>
 
   <!--Dishes-->
 
@@ -307,6 +331,7 @@
       </div>
     </div>
   </div>
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
